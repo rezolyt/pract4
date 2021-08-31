@@ -1,0 +1,337 @@
+$primaryC: #333333;
+$secodaryC: #bdbdbd;
+
+@font-face {
+  font-family: "TT Hoves";
+  font-style: normal;
+  font-weight: 400;
+  src: local("TT Hoves"), url("font/TTHoves-Regular.woff2") format("woff2"),
+    url("font/TTHoves-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "TT Hoves";
+  font-weight: 300;
+  src: local("TT Hoves"), url("font/TTHoves-Light.woff2") format("woff2"),
+    url("font/TTHoves-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "TT Hoves";
+  font-weight: 700;
+  src: local("TT Hoves"), url("font/TTHoves-Bold.woff2") format("woff2"),
+    url("font/TTHoves-Bold.woff") format("woff");
+}
+@mixin heading2 {
+  h2 {
+    font-weight: 300;
+    color: $secodaryC;
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+body {
+  position: relative;
+  font-family: "TT Hoves";
+  color: $primaryC;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+.navbar {
+  background-color: white;
+}
+.menu {
+  ul {
+    display: flex;
+    justify-content: start;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    flex-direction: row;
+    margin-right: 60px;
+    list-style: none;
+    font-size: 12px;
+
+    a {
+      color: $primaryC;
+    }
+    a:hover,
+    a.active {
+      border-top: 1px solid $primaryC;
+      border-bottom: 1px solid $primaryC;
+    }
+  }
+}
+header .wrapper {
+  display: grid;
+  grid-template-columns: 400px auto;
+  height: 102px;
+}
+.wrapper .logo,
+.wrapper .menu {
+  align-self: center;
+}
+.btn {
+  font-family: "TT Hoves";
+  border: 0px solid black;
+  padding: 30px 50px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+}
+.btn-primary {
+  background-color: white;
+  color: $primaryC;
+}
+.btn-secondary {
+  background-color: $primaryC;
+  color: white;
+}
+.s1 {
+  .controllers{
+    .s-nav,.pegi{
+      display: flex;
+      align-items: flex-end;
+      align-content: flex-end;
+      justify-content: space-between;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      align-self: center;
+      width: 53px;
+      height: 53px;
+      justify-content: center;
+      background-color: white;
+      border: 1px solid #F2F2F2;
+      margin: 11px;
+    }
+    button:hover{
+      background-color: #F9F9F9;
+    }
+    .divider::before {
+      content: "";
+      bottom: 30px;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #bdbdbd;
+      transform: rotateZ(  313deg  );
+      display: block;
+      position: absolute;
+    
+    }
+    span{
+      font-size: 24px;
+line-height: 24px;
+color:#BDBDBD;
+margin: 20px;
+    }
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 400px auto;
+    align-items: center;
+    position: relative;
+  }
+  .left h1 {
+    font-size: 64px;
+    font-weight: 300;
+    color: $secodaryC;
+  }
+  .left h1 span {
+    font-weight: 700;
+    color: $primaryC;
+  }
+  .controllers {
+    position: absolute;
+    bottom: 0;
+  }
+  .divider {
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
+  .btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .prev img {
+    transform: rotate(180deg);
+  }
+  .right {
+    position: relative;
+  }
+}
+.s2 {
+  margin-top: 120px;
+  background-color: #fbfbfb;
+  .images {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 1fr auto;
+    break-inside: avoid;
+    align-items: center;
+    img {
+      margin: 15px;
+    }
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+  }
+  .text {
+    font-weight: 300;
+    @include heading2;
+  }
+}
+.s3 {
+  margin-top: 120px;
+  @include heading2;
+  .col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    div {
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+    }
+  }
+}
+.s4 {
+  @include heading2;
+  .grid {
+    .item:hover {
+      .cover {
+        opacity: 1;
+      }
+    }
+    .item {
+      position: relative;
+      .cover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        background-color: #333333d8;
+        overflow: hidden;
+        h4{
+          margin: 48px 79px 0 79px ;
+          font-weight: 700;
+          color:#ffffff;
+          font-size: 64px;
+        }
+        .link{
+          margin: 0px 0px 48px 79px;
+          color: white;
+          display: flex;
+          align-items: center;
+          size: 12px;
+        }
+      }
+    }
+    .col-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+      grid-auto-rows: minmax(100px, auto);
+      margin-bottom: 30px;
+    }
+    .col-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+      grid-auto-rows: minmax(100px, auto);
+    }
+    .one {
+      grid-column: 1/2;
+      grid-row: 1;
+    }
+    .two {
+      grid-column: 2/3;
+      grid-row: 1;
+    }
+    .three {
+      grid-column: 1/2;
+      grid-row: 1;
+    }
+    .four {
+      grid-column: 2/3;
+      grid-row: 1;
+    }
+    .five {
+      grid-column: 3/4;
+      grid-row: 1;
+    }
+  }
+}
+.s5{
+  margin-top: 120px;
+  @include heading2;
+  .wrapper {
+    display: grid;
+    grid-template-columns: 400px auto;
+    position: relative;
+    grid-gap: 30px;
+    .left{
+      input[type=text]{
+        width: 90%;
+        border: 0;
+        background: #F3F3F3;
+        padding: 15px 20px;
+        margin: 5px 0;
+      }
+      textarea{
+        width: 90%;
+        border: 0;
+        background: #F3F3F3;
+        padding: 15px 20px;
+        margin: 5px 0;
+      }
+      input[type=checkbox]{
+        margin-top: 15px;
+      }
+      .btn{
+        margin-top: 20px;
+      }
+    }
+  }
+}
+footer{
+  background-color: #2C2C2C;
+  color:white;
+  padding-top: 58px;
+  margin-top: 120px;
+  .wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    grid-gap: 30px;
+    .social{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    h4{
+      font-size: 16px;
+      font-weight: 700;
+    }
+    ul{
+      padding: 0;
+    }
+    li{
+      list-style: none;
+      padding:8px  0 ;
+    }
+    a {
+      color:white;
+    }
+  }
+}

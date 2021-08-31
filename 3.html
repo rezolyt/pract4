@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: white;
+    }
+    .clock {
+      width: 300px;
+      height: 300px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hours, .min, .sec {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    position: absolute;
+    border-radius: 50%;
+}
+    .hours {
+      width: 160px;
+      height: 160px;
+      position: absolute;
+    }
+    .min {
+      width: 180px;
+      height: 180px;
+      position: absolute;
+    }
+    .hours {
+      width: 160px;
+      height: 160px;
+      position: absolute;
+    }
+    .hours .s:before {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 80px;
+      background: #ff105e;
+      z-index: 10;
+      border-radius: 6px 6px 0 0;
+    }
+    .min .s:before {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 90px;
+      background: balck;
+      z-index: 11;
+      border-radius: 6px 6px 0 0;
+    }
+    .sec .s:before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 80px;
+      background: balck;
+      z-index: 10;
+      border-radius: 6px 6px 0 0;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <body>
+    <div class="clock">
+      <div class="hours"><div class="s"></div></div>
+      <div class="min"><div class="s"></div></div>
+      <div class="sec"><div class="s"></div></div>
+    </div>
+    <script>
+        window.onload = function() {
+
+      let hs = document.querySelector(".hours .s");
+      let ms = document.querySelector(".min .s");
+      let ss = document.querySelector(".sec .s");
+
+      function displayTime() {
+        let date = new Date();
+        let hours = date.getHours() * 30;
+        let min = date.getMinutes() * 6;
+        let sec = date.getSeconds() * 6;
+        hs.style.transform = `rotateZ(${hours + min / 12}deg)`;
+        ms.style.transform = `rotateZ(${min}deg)`;
+        ss.style.transform = `rotateZ(${sec}deg)`;
+      }
+
+      const createClock = setInterval(displayTime, 1000);
+    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      .logo {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        background: white;
+      }
+      .clock {
+        width: 100px;
+        height: 100px;
+        background-color: #fafafa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .hours,
+      .min,
+      .sec {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        position: absolute;
+        border-radius: 50%;
+      }
+      .hours {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+      }
+      .min {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+      }
+      .hours {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+      }
+      .hours .s:before {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 30px;
+        background: #ff105e;
+        z-index: 10;
+        border-radius: 6px 6px 0 0;
+      }
+      .min .s:before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 40px;
+        background: black;
+        z-index: 11;
+        border-radius: 6px 6px 0 0;
+      }
+      .sec .s:before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 30px;
+        background: black;
+        z-index: 10;
+        border-radius: 6px 6px 0 0;
+      }
+
+      @keyframes animate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="wrapper">
+          <div class="logo">
+            <div class="clock">
+              <div class="hours"><div class="s"></div></div>
+              <div class="min"><div class="s"></div></div>
+              <div class="sec"><div class="s"></div></div>
+            </div>
+          </div>
+          <nav class="menu">
+            <ul>
+              <li><a href="#" class="active">ГЛАВНАЯ</a></li>
+              <li><a href="#">ГАЛЕРЕЯ</a></li>
+              <li><a href="#">ПРОЕКТЫ</a></li>
+              <li><a href="#">СЕРТИФИКАТЫ</a></li>
+              <li><a href="#">КОНТАКТЫ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="s1">
+      <div class="container">
+        <div class="wrapper">
+          <div class="left">
+            <h1>PROJECT <span>HOME</span></h1>
+            <div class="controllers">
+              <div class="s-nav">
+                <button class="prev">
+                  <img src="img/arrow-2-right-long.png" alt="" srcset="" />
+                </button>
+                <button class="next">
+                  <img src="img/arrow-2-right-long.png" alt="" srcset="" />
+                </button>
+              </div>
+              <div class="pegi">
+                <span>01</span>
+                <div class="divider"></div>
+                <span>02</span>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <img
+              src="img/Rectangle6.png"
+              alt=""
+              srcset=""
+              style="width: 100%"
+            /><button class="btn btn-primary">
+              ВЗГЛЯНУТЬ<img src="img/arrow-2-right-long.png" alt="" srcset="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s2">
+      <div class="container">
+        <div class="images">
+          <div>
+            <img src="img/Rectangle8.png" alt="" srcset="" /><img
+              src="img/Rectangle10.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div><img src="img/Rectangle9.png" alt="" srcset="" /></div>
+        </div>
+        <div class="text">
+          <h2>О компании</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.
+          </p>
+          <button class="btn btn-primary">
+            ЧИТАТЬ<img src="img/arrow-2-right-long.png" alt="" srcset="" />
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="s3">
+      <div class="container">
+        <h2>Основные задачи</h2>
+        <div class="col-2">
+          <div>
+            <img src="img/1.png" alt="" srcset="" />
+            <p>
+              Создание комфортных условий и повышение качества обслуживания
+              клиентов
+            </p>
+          </div>
+          <div>
+            <img src="img/2.png" alt="" srcset="" />
+            <p>
+              Постоянно совершенствовать качество предоставляемых услуг путем
+              обучения персонала, закупки нового оборудования и усиленной
+              рекламы на рынке
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s4">
+      <div class="container">
+        <h2>Наши проекты</h2>
+        <div class="grid">
+          <div class="col-2">
+            <div class="item one">
+              <img src="img/Rectangle12.png" alt="" />
+              <div class="cover">
+                <h4>ДОСУГОВЫЙ ЦЕНТР</h4>
+                <a class="link"
+                  >ПОДРОБНЕЕ <img src="img/arrow-2-right-long-w.png" alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="item two">
+              <img src="img/image15.png" alt="" />
+              <div class="cover">
+                <h4>ДОСУГОВЫЙ ЦЕНТР</h4>
+                <a class="link"
+                  >ПОДРОБНЕЕ <img src="img/arrow-2-right-long-w.png" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="item three">
+              <img src="img/image16.png" alt="" />
+              <div class="cover">
+                <h4>ДОСУГОВЫЙ ЦЕНТР</h4>
+                <a class="link"
+                  >ПОДРОБНЕЕ <img src="img/arrow-2-right-long-w.png" alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="item four">
+              <img src="img/image17.png" alt="" />
+              <div class="cover">
+                <h4>ДОСУГОВЫЙ ЦЕНТР</h4>
+                <a class="link"
+                  >ПОДРОБНЕЕ <img src="img/arrow-2-right-long-w.png" alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="item five">
+              <img src="img/image18.png" alt="" />
+              <div class="cover">
+                <h4>ДОСУГОВЫЙ ЦЕНТР</h4>
+                <a class="link"
+                  >ПОДРОБНЕЕ <img src="img/arrow-2-right-long-w.png" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-secondary">ВСЕ ПРОЕКТЫ <img src="img/arrow-2-right-long-w.png" alt=""
+            /></button>
+        </div>
+      </div>
+    </section>
+    <section class="s5">
+      <div class="container">
+        <h2>Связаться с нами</h2>
+        <div class="wrapper">
+          <div class="left">
+            <form action="">
+              <input type="text" placeholder="Имя" /></input>
+              <input type="text" placeholder="Номер телефона"/></input>
+              <input type="text" placeholder="E-mail"/></input>
+              <input type="text" placeholder="Интересующий товар/услуга"/></input>
+              <textarea name="" id=""  rows="4" placeholder="123"></textarea>
+              <input type="checkbox" name="" id="">Отправляя заявку Вы соглашаетесь
+              с политикой 
+             конфиденциальности</input>
+              <button class="btn btn-secondary">ОТПРАВИТЬ <img src="img/arrow-2-right-long-w.png" alt=""
+                /></button></form>
+          </div>
+          <div class="right"><img src="img/image12.png" alt="" /></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>  <div class="container">  
+        <div class="wrapper">
+<div></div>
+<div><h4>Информация</h4>
+<ul><li><a href="">Главная</a></li>
+  <li><a href="">Галерея</a></li>
+  <li><a href="">Проекты</a></li>
+  <li><a href="">Сертификаты</a></li>
+  <li><a href="">Контакты</a></li></ul>
+</div>
+<div><h4>Контакты</h4>
+  <ul><li><img src="img/Vector (1).png" alt=""><a href="">100000, Республика  Казахстан, 
+    г. Караганда, ул. Телевизионная 10</a></li>
+    <li><img src="img/Vector.png" alt=""><a href="">+38 (000) 000 00 00</a></li>
+    <li><img src="img/Vector (2).png" alt=""><a href="">mail@gmail.com</a></li></ul>
+  </div><div>
+<h4>Социальные сети</h4>
+<div class="social"><img src="img/facebook.png" alt=""><img src="img/twitter.png" alt=""><img src="img/Linked In.png" alt=""><img src="img/pininterest.png" alt=""></div></div>
+    </div>
+  </div>
+    </footer>
+    <script>
+      window.onload = function () {
+        let hs = document.querySelector(".hours .s");
+        let ms = document.querySelector(".min .s");
+        let ss = document.querySelector(".sec .s");
+
+        function displayTime() {
+          let date = new Date();
+          let hours = date.getHours() * 30;
+          let min = date.getMinutes() * 6;
+          let sec = date.getSeconds() * 6;
+          hs.style.transform = `rotateZ(${hours + min / 12}deg)`;
+          ms.style.transform = `rotateZ(${min}deg)`;
+          ss.style.transform = `rotateZ(${sec}deg)`;
+        }
+
+        const createClock = setInterval(displayTime, 1000);
+      };
+    </script>
+  </body>
+</html>
